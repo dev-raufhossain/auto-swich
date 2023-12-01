@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  h1.secends-count-timer {
+    display: none;
+}
+
+.switch-btn-group .row {
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.switch-item-right h1 {
+        font-family: 'poppins', sans-serif;
+        font-size: 30px;
+        color: #7A7A7A;
+        font-weight: 700;
+    }
+
+    .switch-item-left h1 {
+        font-family: 'poppins', sans-serif;
+        color: #7A7A7A;
+        font-size: 30px;
+        font-weight: 700;
+    }
+.switch-container {
+    height: 100px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    border: 2px solid #000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+
+}
+
+.switch-item-left {
+    flex: 33.3%;
+}
+
+.switch-item-center {
+    flex: 33.3%;
+}
+
+
+.switch-item-right {
+    flex: 33.3%;
+}
+
+
+.switch-input {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.switch-input input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 180px;
+    height: 65px;
+    background: #ff3030;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+   
+}
+
+
+.switch-label:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background:#fff;
+    border-radius: 90px;
+    transition: 2.5s;
+    -webkit-transition: 2.5s;
+    -moz-transition: 2.5s;
+    -ms-transition: 2.5s;
+    -o-transition: 3.5s;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    -ms-border-radius: 90px;
+    -o-border-radius: 90px;
+}
+
+.switch-input input:checked+label {
+   background: #00cd00;
+}
+
+.switch-input input:checked+.switch-label:after {
+    left: calc(100% - 10px);
+    transform: translateX(-100%);
+}
+
+.switch-label:active:after {
+    width: 80px;
+}
+
+
+@media (max-width: 450px) and (min-width: 200px) {
+
+    .switch-item-right .flex-item-left {
+        flex: 33.3%;
+    }
+    .switch-item-center {
+    flex: 33.3%;
+}
+
+    .switch-container {
+         height: 65px;
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .switch-item-right h1 {
+        font-size: 15px;
+    }
+
+    .switch-item-left h1 {
+        font-size: 15px;
+    }
+
+    .switch-label {
+        width: 80px;
+        height: 40px;
+    }
+
+    .switch-label:after {
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    input:checked+.switch-label:after {
+        left: calc(100% - 5px);
+    }
+
+    .switch-label:active:after {
+        width: 50px;
+    }
+}
+
+
+@media (max-width: 800px) and (min-width: 451px) {
+
+    .switch-item-right, .flex-item-left {
+        flex: 33.3%;
+    }
+    .switch-item-center {
+    flex: 33.3%;
+}
+
+    .switch-container {
+         height: 80px;
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .switch-item-right h1 {
+        font-size: 25px;
+    }
+
+    .switch-item-left h1 {
+        font-size: 25px;
+    }
+
+    .switch-label {
+        width: 130px;
+        height: 50px;
+    }
+
+    .switch-label:after {
+        top: 5px;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    input:checked+.switch-label:after {
+        left: calc(100% - 5px);
+    }
+
+    .switch-label:active:after {
+        width: 50px;
+    }
+}
+</style>
+</head>
+<body>
+          <!-- ======================== switch Section Start  ======================== -->
+     
+          <div class="container switch-btn-group">
+            <h1 class="secends-count-timer">Countdown: <span id="countdownn">1.5</span> seconds</h1>
+            <div class="row">
+                <div class="switch-container">
+                    <div class="switch-item-left">
+                        <h1>Wertverlust</h1><!-- Chang this to your Text -->
+                    </div>
+                    <div class="switch-item-center switch-input">
+                        <input type="checkbox" id="switch-btn" /><label class="switch-label" for="switch">Toggle</label>
+                    </div>
+                    <div class="switch-item-right">
+                        <h1>Ertrag</h1> <!-- Chang this to your Text -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+                const checkbox = document.getElementById("switch-btn");
+                const countdownElement = document.getElementById("countdownn");
+    
+                function toggleSwitch() {
+                    checkbox.checked = !checkbox.checked;
+                }
+    
+                function updateCountdown(seconds) {
+                    countdownElement.textContent = seconds;
+                }
+    
+                let seconds = 3;
+                updateCountdown(seconds);
+                const countdownInterval = setInterval(function () {
+                    seconds--;
+                    updateCountdown(seconds);
+                    if (seconds <= 0) {
+                        clearInterval(countdownInterval);
+                        toggleSwitch();
+                    }
+                }, 800);
+            });
+    
+        </script>  
+</body>
+</html>

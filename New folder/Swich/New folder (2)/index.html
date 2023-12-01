@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animated {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+.innerGradient {
+    z-index: -1;
+    width: 300%;
+    height: 300%;
+    position: absolute;
+    animation: gra 5s;
+    -webkit-animation: gra 5s;
+    background: linear-gradient(135deg, #ff670f 0%, #ff670f 20%, #ffffff 50%, #0eea57 80%, #0eea57 100%);
+    background: -webkit-linear-gradient(0deg, #ff670f 0%, #ff670f 20%, #ffffff 50%, #0eea57 80%, #0eea57 100%);
+}
+@keyframes gra {
+    0% { left: -100%; top: -100%; }
+    50% { left: 0%; top: 0%; }
+    100% { left: -100%; top: -100%; }
+}
+    </style>
+</head>
+<body>
+    <div class="animated">
+        <h1>Hello</h1>
+        <div class="innerGradient"></div>
+    </div>
+</body>
+</html>

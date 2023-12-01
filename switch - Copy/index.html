@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================== Menu Section Start  ======================== -->
+  <!--   <div class="menu-container">
+        <div class="menu-item-left">
+            <img src="Picture2.png" alt="">
+        </div>
+        <div class="menu-item-right">
+            <h3>MIETKAUTION <br>
+                PROFESSIONELL ANGELEGT
+            </h3>
+        </div>
+    </div> -->
+     <!-- ======================== Menu Section End  ======================== -->
+
+      <!-- ======================== switch Section Start  ======================== -->
+     
+    <div class="container switch-btn-group">
+        <h1 class="secends-count-timer">Countdown: <span id="countdown">1.5</span> seconds</h1>
+        <div class="row">
+            <div class="switch-container">
+                <div class="switch-item-left">
+                    <h1>Wertverlust</h1><!-- Chang this to your Text -->
+                </div>
+                <div class="switch-item-center switch-input">
+                    <input type="checkbox" id="switch" /><label class="switch-label" for="switch">Toggle</label>
+                </div>
+                <div class="switch-item-right">
+                    <h1>Ertrag</h1> <!-- Chang this to your Text -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- ======================== switch Section End  ======================== -->
+
+    <!-- ======================== sjs Section Start  ======================== -->
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkbox = document.getElementById("switch");
+            const countdownElement = document.getElementById("countdown");
+            function toggleSwitch() {
+                checkbox.checked = !checkbox.checked;
+                setInterval(function () {
+                    window.location.href = "https://raufhossain.com";   //Chang this to your link
+                }, 2500);
+            }
+            function updateCountdown(seconds) {
+                countdownElement.textContent = seconds;
+            }
+            let seconds = 2;
+            updateCountdown(seconds);
+            const countdownInterval = setInterval(function () {
+                seconds--;
+                updateCountdown(seconds);
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    toggleSwitch();
+                }
+            }, 800);
+        });
+
+    </script>  
+
+    <!-- ======================== js Section End  ======================== -->
+
+</body>
+
+</html>

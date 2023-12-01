@@ -1,0 +1,116 @@
+body{
+  background-color: black !important;
+}
+
+/* ============== Toggle Switch Start ==============  */
+.switch-btn-group-section{
+  border-radius: 70px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  -ms-border-radius: 70px;
+  -o-border-radius: 70px;
+}
+
+.switch-btn-group{
+  margin-top: 120px;
+}
+
+.switch-box-text h1{
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+ .switch-input input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+
+  
+  .switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 180px;
+    height: 75px;
+    background: #ED2938;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    animation-name: switch-label-color-change;
+    animation-duration: .5s;
+    animation-delay: 3s;  
+  }
+  @keyframes switch-label-color-change {
+    25%  {background-color: #B25F4A;}
+    50%  {background-color: #77945C;}
+    75%  {background-color: #3BCA6D;}
+    100% {background-color: #00FF7F;}
+  }
+
+  .switch-label:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 90px;
+    transition: .5s;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    -ms-border-radius: 90px;
+    -o-border-radius: 90px;
+}
+
+.switch-input input:checked + label {
+  background: green;
+}
+
+  .switch-input input:checked + .switch-label:after {
+    left: calc(100% - 10px);
+    transform: translateX(-100%);
+  }
+  .switch-label:active:after {
+    width: 80px;
+  }
+  /* ============== Toggle Switch End ==============  */
+
+
+ /*============= Responsive Start ================*/
+  @media (max-width: 576px) { 
+    .switch-btn-group{
+      margin-top: 40px;
+    }
+    .switch-box-text h1{
+      font-size: 20px;
+      padding: 0px;
+    }
+    .container .row{
+      padding: 0 10px 0 10px; ;
+    }
+    .switch-label {
+      width: 110px;
+      height: 50px;
+    }
+    .switch-label:after {
+      top: 5px;
+      left: 5px;
+      width: 40px;
+      height: 40px;
+    }
+    input:checked + .switch-label:after {
+      left: calc(100% - 5px);
+    }
+    .switch-label:active:after {
+      width: 50px;
+    }
+   }
+ /*============= Responsive End ================*/

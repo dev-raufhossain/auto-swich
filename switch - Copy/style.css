@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #2F3033;
+}
+
+/* ====================  Menu Section Start ================= */
+
+.menu-container {
+    padding: 40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+
+}
+
+.menu-item-left {
+    flex: 50%;
+    align-items: left !important;
+}
+
+.menu-item-left img {
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    margin-left: 50px;
+
+}
+
+.menu-item-right {
+    flex: 50%;
+    text-align: right;
+    color: #fff
+}
+
+.menu-item-right h3 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+/* ====================  Menu Section End ================= */
+
+
+/* ====================  switch Section Start ================= */
+
+.secends-count-timer{
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+
+}
+
+.switch-btn-group .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.switch-container {
+    height: 100px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+
+}
+
+.switch-item-left {
+    flex: 33.3%;
+}
+
+.switch-item-center {
+    flex: 33.3%;
+}
+
+.switch-item-right {
+    flex: 33.3%;
+}
+
+.switch-input {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.switch-input input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 180px;
+    height: 75px;
+    background: #ff3030;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+   
+}
+
+
+.switch-label:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background:#fff;
+    border-radius: 90px;
+    transition: 2.5s;
+    -webkit-transition: 2.5s;
+    -moz-transition: 2.5s;
+    -ms-transition: 2.5s;
+    -o-transition: 2.5s;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    -ms-border-radius: 90px;
+    -o-border-radius: 90px;
+}
+
+.switch-input input:checked+label {
+   background: #00cd00;
+}
+
+.switch-input input:checked+.switch-label:after {
+    left: calc(100% - 10px);
+    transform: translateX(-100%);
+}
+
+.switch-label:active:after {
+    width: 80px;
+}
+
+/* ====================  switch Section End ================= */
+
+/* ====================  responsive Section Start ================= */
+@media (max-width: 800px) {
+
+    /* ====================  responsive Menu Section Start ================= */
+    .menu-item-right,
+    .menu-item-left {
+        flex: 50%;
+    }
+
+    .menu-item-left img {
+        z-index: 2;
+        width: 90px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .menu-item-right h3 {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .menu-container {
+        padding: 10px 10px;
+    }
+
+    /* ==================== responsive Menu Section End ================= */
+
+    /* ==================== responsive switch Section Start ================= */
+
+    .switch-btn-group .row {
+        margin-top: 80px;
+    }
+    
+
+
+    .switch-item-right .flex-item-left {
+        flex: 33.3%;
+    }
+
+    .switch-container {
+        width: 95%;
+        padding: 10px 0px;
+    }
+
+    .switch-item-right h1 {
+        font-size: 20px;
+    }
+
+    .switch-item-left h1 {
+        font-size: 20px;
+    }
+
+    .switch-label {
+        width: 110px;
+        height: 50px;
+    }
+
+    .switch-label:after {
+        top: 5px;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    input:checked+.switch-label:after {
+        left: calc(100% - 5px);
+    }
+
+    .switch-label:active:after {
+        width: 50px;
+    }
+}
+
+/* ==================== responsive switch Section End ================= */
+/* ====================  responsive Section End ================= */

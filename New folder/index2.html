@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        /* ====================  Menu Section Start ================= */
+
+        .menu-container {
+            padding: 40px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 30px;
+
+        }
+
+        .menu-item-left {
+            flex: 50%;
+            align-items: left !important;
+        }
+
+        .menu-item-left img {
+            z-index: 2;
+            width: 300px;
+            height: 100px;
+            margin-left: 50px;
+
+        }
+
+        .menu-item-right {
+            flex: 50%;
+            text-align: right;
+            color: #fff
+        }
+
+        .menu-item-right h3 {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 40px;
+        }
+
+        /* ====================  Menu Section End ================= */
+
+
+/* ====================  switch Section Start ================= */
+
+        .switch-btn-group .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .switch-btn-group .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .switch-container {
+            height: 100px;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            width: 70%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 150px;
+            -webkit-border-radius: 150px;
+            -moz-border-radius: 150px;
+            -ms-border-radius: 150px;
+            -o-border-radius: 150px;
+
+        }
+
+        .switch-item-left {
+            flex: 33.3%;
+        }
+
+        .switch-item-center {
+            flex: 33.3%;
+        }
+
+        .switch-item-right {
+            flex: 33.3%;
+        }
+
+        .switch-input {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .switch-input input[type=checkbox] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+
+        .switch-label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 180px;
+            height: 75px;
+            background: #ED2938;
+            display: block;
+            border-radius: 100px;
+            position: relative;
+            animation-name: switch-label-color-change;
+            animation-duration: .5s;
+            animation-delay: 3s;
+        }
+
+        @keyframes switch-label-color-change {
+            25% {
+                background-color: #B25F4A;
+            }
+
+            50% {
+                background-color: #77945C;
+            }
+
+            75% {
+                background-color: #3BCA6D;
+            }
+
+            100% {
+                background-color: #00FF7F;
+            }
+        }
+
+        .switch-label:after {
+            content: '';
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 90px;
+            transition: .5s;
+            -webkit-transition: ;
+            -moz-transition: ;
+            -ms-transition: ;
+            -o-transition: ;
+            -webkit-border-radius: 90px;
+            -moz-border-radius: 90px;
+            -ms-border-radius: 90px;
+            -o-border-radius: 90px;
+        }
+
+        .switch-input input:checked+label {
+            background: green;
+        }
+
+        .switch-input input:checked+.switch-label:after {
+            left: calc(100% - 10px);
+            transform: translateX(-100%);
+        }
+
+        .switch-label:active:after {
+            width: 80px;
+        }
+        /* ====================  switch Section End ================= */
+
+        /* ====================  responsive Section Start ================= */
+        @media (max-width: 800px) {
+            /* ====================  responsive Menu Section Start ================= */
+            .menu-item-right,
+            .menu-item-left {
+                flex: 50%;
+            }
+            .menu-item-left img {
+                z-index: 2;
+                width: 90px;
+                height: 40px;
+                margin-left: 10px;
+            }
+            .menu-item-right h3 {
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 20px;
+            }
+            .menu-container {
+                padding: 10px 10px;
+            }
+/* ==================== responsive Menu Section End ================= */
+
+/* ==================== responsive switch Section Start ================= */
+
+            .switchitem-right .flex-item-left {
+                flex: 33.3%;
+            }
+
+            .switch-container {
+                width: 95%;
+                padding: 10px 0px;
+            }
+
+            .switch-item-right h1 {
+                font-size: 20px;
+            }
+
+            .switch-item-left h1 {
+                font-size: 20px;
+            }
+
+            .switch-label {
+                width: 110px;
+                height: 50px;
+            }
+
+            .switch-label:after {
+                top: 5px;
+                left: 5px;
+                width: 40px;
+                height: 40px;
+            }
+
+            input:checked+.switch-label:after {
+                left: calc(100% - 5px);
+            }
+
+            .switch-label:active:after {
+                width: 50px;
+            }
+        }
+        /* ==================== responsive switch Section End ================= */
+        /* ====================  responsive Section End ================= */
+    </style>
+</head>
+
+<body>
+
+    <!-- ======================== Menu Section Start  ======================== -->
+    <div class="menu-container">
+        <div class="menu-item-left">
+            <img src="Picture2.png" alt="">
+        </div>
+        <div class="menu-item-right">
+            <h3>MIETKAUTION <br>
+                PROFESSIONELL ANGELEGT
+            </h3>
+        </div>
+    </div>
+     <!-- ======================== Menu Section End  ======================== -->
+
+      <!-- ======================== switch Section Start  ======================== -->
+
+    <div class="container switch-btn-group">
+        <p class="text-light pb-5">Countdown: <span id="countdown">3</span> seconds</p>
+        <div class="row">
+
+            <div class="switch-container">
+                <div class="switch-item-left">
+                    <h1>Wertverlust</h1>
+                </div>
+                <div class="switch-item-center switch-input">
+                    <input type="checkbox" id="switch" /><label class="switch-label" for="switch">Toggle</label>
+                </div>
+                <div class="switch-item-right">
+                    <h1>Ertrag</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- ======================== switch Section End  ======================== -->
+
+    <!-- ======================== sjs Section Start  ======================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkbox = document.getElementById("switch");
+            const countdownElement = document.getElementById("countdown");
+            function toggleSwitch() {
+                checkbox.checked = !checkbox.checked;
+            }
+            function updateCountdown(seconds) {
+                countdownElement.textContent = seconds;
+            }
+            let seconds = 3;
+            updateCountdown(seconds);
+            const countdownInterval = setInterval(function () {
+                seconds--;
+                updateCountdown(seconds);
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    toggleSwitch();
+                    window.location.href = "https://youtube.com";
+                }
+            }, 1000);
+        });
+
+    </script>
+
+    <!-- ======================== js Section End  ======================== -->
+</body>
+
+</html>
